@@ -1,0 +1,335 @@
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+/* Title CSS */
+
+.container h1{
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    padding-top: 11rem;
+}
+
+.container p{
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+/* Form CSS */
+
+.container form{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 16rem;
+}
+
+.container form input.city {
+    background: #fff;
+    padding: 1rem 1rem;
+    margin-right: 2rem;
+    border-radius: 0.3rem;
+}
+
+.container form select.country-input{
+    background: #fff;
+    width: 17%;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    height: 1.6rem;
+    margin-right: 2rem;
+}
+
+
+.container form input.city-submit{
+    cursor: pointer;
+}
+
+/* Background */
+
+.the-body {
+    background: #1D7AF5;
+}
+
+/* Padding */
+
+.results {
+    padding-left: 4rem;
+}
+
+/* Title */
+
+.results h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    color: #fff;
+    /* display: inline-block; */
+}
+
+@media (max-width: 800px) {
+    .results h2 {
+        font-size: 1.7rem;
+    }
+}
+
+.results .day {
+    background: #fff;
+    border-radius: 0.3rem;
+    width: 70%;
+    padding: 1.4rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    transition: ease-in-out 0.5s;
+}
+
+@media (max-width: 800px) {
+    .results .day {
+        width: 80%;
+    }
+}
+
+.results .day:hover {
+    box-shadow: 10px 11px 24px -12px rgba(0, 0, 0, 0.75);
+}
+
+.weather-icon {
+    position: absolute;
+    top: 20%;
+    right: 4%;
+    width: 3.5rem;
+}
+
+@media (max-width: 700px) {
+    .weather-icon {
+        top: 12%;
+        right: 8%;
+        width: 2.5rem;
+    }
+}
+
+/* Infos */
+
+.day .day-date,
+.day .day-weather {
+    margin-bottom: 0.6rem;
+}
+
+.day .day-date {
+    font-weight: 700;
+}
+
+.day .day-temp {
+    position: absolute;
+    top: 35%;
+    right: 16%;
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 700px) {
+    .day .day-temp {
+        top: 67%;
+        right: 2%;
+        font-size: 1.2rem;
+    }
+    .day .day-weather,
+    .day .day-humid {
+        font-size: 0.9rem;
+    }
+}
+
+/* Gif position */
+
+.gif h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Form CSS */
+
+.weather form {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.weather form h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    color: #fff;
+}
+
+.weather form input.city-submit {
+    cursor: pointer;
+}
+
+.weather form input.city {
+    background: #fff;
+    padding: 1rem 1rem;
+    margin-right: 4rem;
+    border-radius: 0.3rem;
+}
+
+/* Weather clouds */
+
+.weather-loader {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 50, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(48% - 35px);
+    left: calc(88% - 35px);
+    z-index: -1;
+    /* display: none; */
+}
+
+.weather-loader-two {
+    background: rgba(29, 123, 245, 0);
+    top: calc(130% - 35px);
+    left: calc(78% - 35px);
+}
+
+
+.weather-loader-three {
+    background: rgba(29, 123, 245, 0);
+    top: calc(230% - 35px);
+    left: calc(88% - 35px);
+}
+
+.weather-loader-four {
+    background: rgba(29, 123, 245, 0);
+    top: calc(335% - 35px);
+    left: calc(88% - 35px);
+}
+
+.weather-loader:after,
+.weather-loader:before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    background: rgba(250, 250, 250, 1);
+    display: block;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    animation: cloud1 2.5s ease-in-out infinite alternate;
+    box-shadow: 20px -15px 0 rgba(250, 250, 250, 1), 40px 10px 0 rgba(250, 250, 250, 1), 55px -15px 0 rgba(250, 250, 250, 1), 75px 0px 0 rgba(250, 250, 250, 1);
+}
+
+.weather-loader:before {
+    left: 0px;
+    top: -10px;
+    animation-name: cloud4;
+    animation-duration: 5.9s;
+}
+
+.weather-loader-two:before {
+    left: 0px;
+    top: 180px;
+    animation-name: cloud3;
+    animation-duration: 4.9s;
+}
+
+.weather-loader-two:after {
+    animation-name: cloud3;
+    animation-duration: 4.9s;
+}
+
+.weather-loader-three:before {
+    left: 0px;
+    top: 400px;
+    animation-name: cloud4;
+    animation-duration: 2.3s;
+}
+
+.weather-loader-four:after {
+    animation-name: cloud3;
+    animation-duration: 1.9s;
+}
+
+.weather-loader-four:before {
+    left: 0px;
+    top: 400px;
+    animation-name: cloud5;
+    animation-duration: 7.3s;
+}
+
+/* Clouds animation */
+
+@keyframes cloud1 {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes cloud2 {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(-200px);
+    }
+}
+
+@keyframes cloud3 {
+    from {
+        transform: translateX(-40px);
+    }
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+@keyframes cloud4 {
+    from {
+        transform: translateX(-120px);
+    }
+    to {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes cloud5 {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(-100px);
+    }
+}
+
+/* drop */
+
+.drop {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(13, 52, 58, 1)), to(rgba(255, 255, 255, 0.6)));
+    background: -moz-linear-gradient(top, rgba(13, 52, 58, 1) 0%, rgba(255, 255, 255, .6) 100%);
+    width: 1px;
+    height: 89px;
+    position: absolute;
+    bottom: 200px;
+    animation: fall .63s linear infinite;
+}
+
+/* animate the drops*/
+
+@keyframes fall {
+    to {
+        margin-top: 900px;
+    }
+}

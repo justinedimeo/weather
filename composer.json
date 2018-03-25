@@ -1,0 +1,5 @@
+{
+    "require": {
+        "giphy/giphy-php-client": "^1.0"
+    }
+}
